@@ -51,18 +51,10 @@ export default function RootLayout({
           <header className="flex items-center h-20 gap-4 px-4 border-b border-black border-solid sm:px-8 border-opacity-20">
             <Link href="/" className="flex items-center h-20 gap-2 sm:gap-4">
               <Image
-                src="/clerk.svg"
-                alt="Clerk Logo"
-                width={102}
-                height={32}
-                priority
-              />
-              <Times />
-              <Image
-                src="/next.svg"
+                src="/logo.png"
                 alt="Next.js Logo"
-                width={90}
-                height={18}
+                width={50}
+                height={25}
                 priority
               />
             </Link>

@@ -84,7 +84,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer" // Added for security/SEO best practice
             >
-              Clerk Docs <span className="arrow">-></span>
+              Clerk Docs <span className="arrow"></span>
             </a>
           </div>
           {/* Feature 3: Responsive Design */}
