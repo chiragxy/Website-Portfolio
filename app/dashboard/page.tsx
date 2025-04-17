@@ -43,7 +43,7 @@ export default async function DashboardPage() {
             href="https://clerk.com/docs?utm_source=vercel-template&utm_medium=template_repos&utm_campaign=nextjs_template"
             target="_blank"
           >
-            Clerk Docs ->
+            Clerk Docs
           </Link>
         </>
       )}
