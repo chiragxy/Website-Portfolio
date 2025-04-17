@@ -1,7 +1,7 @@
 import { auth, clerkClient } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { OrgDetails, SessionDetails, UserDetails } from "./details";
-import Link from "next/link";
+import Link from "next/link"; // Make sure Link is imported
 
 export default async function DashboardPage() {
   const { userId } = auth();
@@ -16,9 +16,19 @@ export default async function DashboardPage() {
     <div className="px-8 py-12 sm:py-16 md:px-20">
       {user && (
         <>
-          <h1 className="text-3xl font-semibold text-black">
-            👋 Hi, {user.firstName || `Stranger`}
-          </h1>
+          <div className="flex justify-between items-start mb-8">
+             <h1 className="text-3xl font-semibold text-black">
+                👋 Hi, {user.firstName || `Stranger`}
+             </h1>
+             {/* Add the button/link here */}
+             <Link
+                href="/portfolios"
+                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 text-sm font-medium"
+              >
+                View Portfolios
+              </Link>
+          </div>
+
           <div className="grid gap-4 mt-8 lg:grid-cols-3">
             <UserDetails />
             <SessionDetails />
@@ -33,7 +43,7 @@ export default async function DashboardPage() {
             href="https://clerk.com/docs?utm_source=vercel-template&utm_medium=template_repos&utm_campaign=nextjs_template"
             target="_blank"
           >
-            Clerk Docs -&gt;
+            Clerk Docs ->
           </Link>
         </>
       )}
